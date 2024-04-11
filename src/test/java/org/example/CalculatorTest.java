@@ -22,4 +22,8 @@ public class CalculatorTest {
     @Test void testDivision() {
         assertEquals(2, calculator.divide(6, 3));
     }
+    @Test
+    void DividerByZeroTest() {
+        assertThrows(ArithmeticException.class, () -> calculator.divide(6, 0));
+    }
 }
